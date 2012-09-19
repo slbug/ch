@@ -6,7 +6,7 @@ GIT
 
 GIT
   remote: git://github.com/amatsuda/kaminari.git
-  revision: b4b1e578ad81b803522d9bc28713bf1b20e7ded9
+  revision: e9d3ed2b68235b742df5c682da659d1cfe8c1776
   specs:
     kaminari (0.14.1)
       actionpack (>= 3.0.0)
@@ -19,6 +19,12 @@ GIT
     webmock (1.8.10)
       addressable (>= 2.2.7)
       crack (>= 0.1.7)
+
+GIT
+  remote: git://github.com/bmabey/database_cleaner.git
+  revision: e1c3b908d5224b73f5bf229e46f498a90a8f17cb
+  specs:
+    database_cleaner (0.8.0)
 
 GIT
   remote: git://github.com/btakita/rr.git
@@ -44,6 +50,12 @@ GIT
       diff-lcs (>= 1.1.3)
       gherkin (~> 2.11.0)
       json (>= 1.4.6)
+
+GIT
+  remote: git://github.com/dockyard/pg_array_parser.git
+  revision: 22b2514a474cb40fbd077dea804d3ba540ccad29
+  specs:
+    pg_array_parser (0.0.8)
 
 GIT
   remote: git://github.com/flyerhzm/bullet.git
@@ -80,7 +92,7 @@ GIT
 
 GIT
   remote: git://github.com/jonleighton/poltergeist.git
-  revision: 8ffff0a65f1c1525dc2b4f2008e4d5f73637b970
+  revision: 8abc10a9ccb6e2fb8f33e4175ed5167e4dd551e2
   specs:
     poltergeist (0.7.0)
       capybara (~> 1.1)
@@ -91,7 +103,7 @@ GIT
 
 GIT
   remote: git://github.com/lautis/uglifier.git
-  revision: d214197e7d51907949c00d30e4b695306a036004
+  revision: e32bb87017310e4d1ce8e5915ba2cf898a7a1061
   specs:
     uglifier (1.3.0)
       execjs (>= 0.3.0)
@@ -125,8 +137,14 @@ GIT
     friendly_id (4.0.8)
 
 GIT
+  remote: git://github.com/preston/railroady.git
+  revision: d149cf35b603060f6b38563b25fb1a72325427b2
+  specs:
+    railroady (1.1.0)
+
+GIT
   remote: git://github.com/pry/pry.git
-  revision: bc4fb838eb48b5fb7419c5f2320e88ec1101e95c
+  revision: d350493de2432e8a20bc847a5c55a6ebc257f702
   specs:
     pry (0.9.10)
       coderay (~> 1.0.5)
@@ -141,7 +159,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/arel.git
-  revision: e032dabdb2adb34e3db8cd35e9f58bc0536475c1
+  revision: de7e7c84856a628493ab6f14a7ab41f0011cd83f
   specs:
     arel (3.0.2.20120819075748)
 
@@ -155,15 +173,15 @@ GIT
 
 GIT
   remote: git://github.com/rails/journey.git
-  revision: dae7947ce464fa4cad6f05301bb1b6d5ebe8af8e
+  revision: 850267edd7f19633a6868110d523f86f147c1653
   specs:
     journey (2.0.0.20120723141804)
 
 GIT
   remote: git://github.com/rails/jquery-rails.git
-  revision: e63210ba3e50d487bf867704c28528e64228a7ff
+  revision: 3630135b63b5bf05a29daad86033169c25362614
   specs:
-    jquery-rails (2.1.2)
+    jquery-rails (2.1.3)
       railties (>= 3.1.0, < 5.0)
       thor (~> 0.14)
 
@@ -179,7 +197,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/sprockets-rails.git
-  revision: 6a5502304df82071c0aa1e5e4e64dafd839cc9bd
+  revision: c595128299f17c4db67ffc53672e9a2857d99f8c
   specs:
     sprockets-rails (1.0.1)
       railties (>= 4.0.0.beta, < 5.0)
@@ -200,7 +218,7 @@ GIT
 
 GIT
   remote: git://github.com/rspec/rspec-rails.git
-  revision: be689da3ad8039e2803a6dcb0004c19336241ed5
+  revision: 87ebea13ea2d86bb263c2a37c1518630ddb4439f
   specs:
     rspec-rails (2.11.0)
       actionpack (>= 3.0)
@@ -247,7 +265,7 @@ GIT
 
 GIT
   remote: git://github.com/slbug/rails.git
-  revision: fa6ceb788e0410ed4f83331b57931fb4317d9446
+  revision: ff5f5e416a1a1d4a895eb1fe9c105aaefd54b21c
   branch: 2pulls
   specs:
     actionmailer (4.0.0.beta)
@@ -290,6 +308,13 @@ GIT
       thor (>= 0.15.4, < 2.0)
 
 GIT
+  remote: git://github.com/softace/activerecord-tableless.git
+  revision: b9a8f0a1317aa92ba3b967c85be65d7e243cafee
+  specs:
+    activerecord-tableless (1.0.1)
+      activerecord (>= 3.2)
+
+GIT
   remote: git://github.com/sporkrb/spork.git
   revision: a07c59d6652d81e8863b7ae5767e943fd272b5da
   specs:
@@ -301,6 +326,16 @@ GIT
   specs:
     factory_girl (4.1.0)
       activesupport (>= 3.0.0)
+
+GIT
+  remote: git://github.com/voormedia/rails-erd.git
+  revision: 23d616ab788834ca486f767f1228c70522814231
+  specs:
+    rails-erd (1.0.0)
+      activerecord (>= 3.0)
+      activesupport (>= 3.0)
+      choice (~> 0.1.6)
+      ruby-graphviz (~> 1.0.4)
 
 GIT
   remote: git://github.com/voxdolo/decent_exposure.git
@@ -315,6 +350,7 @@ GEM
     builder (3.1.3)
     childprocess (0.3.5)
       ffi (~> 1.0, >= 1.0.6)
+    choice (0.1.6)
     chunky_png (1.2.6)
     coderay (1.0.7)
     coffee-script (2.2.0)
@@ -337,6 +373,8 @@ GEM
     http_parser.rb (0.5.3)
     i18n (0.6.1)
     json (1.7.5)
+    launchy (2.1.2)
+      addressable (~> 2.3)
     libwebsocket (0.1.5)
       addressable
     mail (2.4.4)
@@ -345,7 +383,7 @@ GEM
       treetop (~> 1.4.8)
     method_source (0.8)
     mime-types (1.19)
-    minitest (3.4.0)
+    minitest (3.5.0)
     multi_json (1.3.6)
     nokogiri (1.5.5)
     pg (0.14.1)
@@ -358,7 +396,8 @@ GEM
     rake (0.9.2.2)
     rdoc (3.12)
       json (~> 1.4)
-    rspec-mocks (2.11.2)
+    rspec-mocks (2.11.3)
+    ruby-graphviz (1.0.8)
     rubyzip (0.9.9)
     selenium-webdriver (2.25.0)
       childprocess (>= 0.2.5)
@@ -366,7 +405,7 @@ GEM
       multi_json (~> 1.0)
       rubyzip
     slop (3.3.3)
-    sprockets (2.5.0)
+    sprockets (2.6.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
@@ -386,6 +425,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-deprecated_finders!
+  activerecord-tableless!
   arel!
   awesome_print!
   bullet!
@@ -395,6 +435,7 @@ DEPENDENCIES
   compass-rails!
   cucumber!
   cucumber-rails!
+  database_cleaner!
   decent_exposure!
   factory_girl!
   ffaker!
@@ -404,10 +445,14 @@ DEPENDENCIES
   journey!
   jquery-rails!
   kaminari!
+  launchy
   pg
+  pg_array_parser!
   poltergeist!
   pry!
+  railroady!
   rails!
+  rails-erd!
   rr!
   rspec!
   rspec-core!

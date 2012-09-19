@@ -13,7 +13,8 @@ gem 'workflow',                         github: 'geekq/workflow'
 gem 'simple_enum',                      github: 'lwe/simple_enum'
 # gem 'simple_form',                      github: 'slbug/simple_form'
 gem 'kaminari',                         github: 'amatsuda/kaminari'
-
+gem 'activerecord-tableless',           github: 'softace/activerecord-tableless'
+gem 'pg_array_parser',                  github: 'dockyard/pg_array_parser'
 # devise, the_role, sidekiq, simple_form - rails4?
 
 gem 'pg'
@@ -49,6 +50,10 @@ group :test, :development do
   gem 'capybara',                       github: 'jnicklas/capybara', branch: '1.1_stable'
   gem 'webmock',                        github: 'bblimke/webmock'
   gem 'spork',                          github: 'sporkrb/spork'
+  gem 'database_cleaner',               github: 'bmabey/database_cleaner'
+  gem 'launchy'
+  gem 'railroady',                      github: 'preston/railroady'
+  gem 'rails-erd',                      github: 'voormedia/rails-erd'
 end
 
 group :development do
