@@ -10,8 +10,13 @@ class SearchController < ApplicationController
   end
 
   def show
+    if search.nil?
+      redirect_to root_url, error: 'Search is expired'
+      return
+    end
+
     search.perform.load
-    if search.results.map(&:hotel_id).uniq.size == 1
+    if search.results.map(&:hotel_id).uniq.size <= 1
       render 'rooms'
     else
       render 'hotels'

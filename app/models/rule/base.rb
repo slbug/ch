@@ -44,7 +44,8 @@ class Rule::Base < ActiveRecord::Base
           LEFT OUTER JOIN "#{Hotel.table_name}" ON "#{Hotel.table_name}"."id" = "#{RoomType.table_name}"."hotel_id"
           LEFT OUTER JOIN "#{hotels_tags}" ON "#{hotels_tags}"."hotel_id" = "#{Hotel.table_name}"."id"
           LEFT OUTER JOIN "#{Tag.table_name}" ON "#{Tag.table_name}"."id" = "#{hotels_tags}"."tag_id")).
-        where(%("#{Hotel.table_name}"."name" = :where OR "#{Tag.table_name}"."name" = :where), where: search.where)
+        where(%("#{Hotel.table_name}"."name" = :where OR "#{Tag.table_name}"."name" = :where), where: search.where).
+        where(hotels: { live: true }, tags: { live: true })
     end
 
     def self.range_to_string(range)

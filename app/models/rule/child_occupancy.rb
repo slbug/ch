@@ -9,27 +9,27 @@ class Rule::ChildOccupancy < Rule::Base
 
       rooms.
         joins(%(
-          LEFT OUTER JOIN "#{Rule::Base.table_name}" "cor_hotels"
-          ON "cor_hotels"."conformable_id" = "#{Hotel.table_name}"."id"
-          AND "cor_hotels"."type" = '#{self.name}'
-          AND "cor_hotels"."conformable_type" = '#{Hotel.name}')).
+          LEFT OUTER JOIN "#{Rule::Base.table_name}" "cor_rooms"
+          ON "cor_rooms"."conformable_id" = "#{RoomType.table_name}"."id"
+          AND "cor_rooms"."type" = '#{self.name}'
+          AND "cor_rooms"."conformable_type" = '#{RoomType.name}')).
         joins(%(
-          LEFT OUTER JOIN "#{Rule::Property.table_name}" "cor_hotels_properties"
-          ON "cor_hotels_properties"."rule_id" = "cor_hotels"."id")).
+          LEFT OUTER JOIN "#{Rule::Property.table_name}" "cor_rooms_properties"
+          ON "cor_rooms_properties"."rule_id" = "cor_rooms"."id")).
         where(%(
-          "cor_hotels"."id" IS NULL
+          "cor_rooms"."id" IS NULL
           OR (
-            "cor_hotels"."id" IS NOT NULL
-            AND "cor_hotels_properties"."name" = :name
-            AND "cor_hotels"."period" && :range::daterange
-            AND :max <= "cor_hotels_properties"."value"::int
+            "cor_rooms"."id" IS NOT NULL
+            AND "cor_rooms_properties"."name" = :name
+            AND "cor_rooms"."period" && :range::daterange
+            AND :max <= "cor_rooms_properties"."value"::int
             AND NOT EXISTS (
               SELECT 1 FROM "#{Rule::Base.table_name}" "rb", "#{Rule::Property.table_name}" "rp"
-              WHERE "cor_hotels"."conformable_id" = "rb"."conformable_id"
-              AND "cor_hotels"."type" = "rb"."type"
-              AND "cor_hotels"."conformable_type" = "rb"."conformable_type"
+              WHERE "cor_rooms"."conformable_id" = "rb"."conformable_id"
+              AND "cor_rooms"."type" = "rb"."type"
+              AND "cor_rooms"."conformable_type" = "rb"."conformable_type"
               AND "rp"."rule_id" = "rb"."id"
-              AND "rp"."name" = "cor_hotels_properties"."name"
+              AND "rp"."name" = "cor_rooms_properties"."name"
               AND "rb"."period" && :range::daterange
               AND "rb"."period" <> '(,)'::daterange
               AND :max > "rp"."value"::int

@@ -14,7 +14,8 @@
 ActiveRecord::Schema.define(version: 20120921125437) do
 
   create_table "hotels", force: true do |t|
-    t.string   "name",       null: false
+    t.string   "name",                       null: false
+    t.boolean  "live",       default: false, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -100,8 +101,9 @@ ActiveRecord::Schema.define(version: 20120921125437) do
   add_index "tag_types", ["name"], name: "index_tag_types_on_name", unique: true
 
   create_table "tags", force: true do |t|
-    t.string   "name",        null: false
-    t.integer  "tag_type_id", null: false
+    t.string   "name",                        null: false
+    t.boolean  "live",        default: false, null: false
+    t.integer  "tag_type_id",                 null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
