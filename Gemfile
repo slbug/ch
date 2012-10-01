@@ -32,6 +32,7 @@ group :assets do
   #  thoughtbot/neat
   #  or bootstrap with compass and simple_form/kaminari
   gem 'uglifier',                       github: 'lautis/uglifier'
+  gem 'turbolinks',                     github: 'rails/turbolinks'
 end
 
 group :test, :development do
