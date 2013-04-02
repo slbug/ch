@@ -9,6 +9,7 @@ class Search::Room < ActiveRecord::Base
 
   after_find :load_attributes
 
+  before_validation :convert_ages
   before_validation :drop_children
 
   validates :adults_count, presence: true, numericality: true, inclusion: { in: 1..MAX_ADULTS_COUNT }
@@ -28,6 +29,10 @@ class Search::Room < ActiveRecord::Base
 
     def load_attributes
       @children_count = children.size
+    end
+
+    def convert_ages
+      children.map!(&:to_i)
     end
 
     def drop_children

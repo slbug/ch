@@ -1,4 +1,5 @@
 = form_for search, url: create_search_path, as: :search do |f|
+  = search.errors.inspect
   .base
     = f.label :where
     = f.text_field :where
@@ -23,6 +24,6 @@
         = r.select :children_count, (0..Search::Room::MAX_CHILDREN_COUNT)
 
         .children
-          -#Child 1: <select id="search_rooms_attributes_0_children" name="search[rooms_attributes][0][children]">
+          Child 1: <select id="search_rooms_attributes_0_children" name="search[rooms_attributes][0][children][]"><option value=10>10</option></select>
 
   = f.submit 'Search Hotels'

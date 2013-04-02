@@ -18,6 +18,11 @@ class RoomType < ActiveRecord::Base
 
   validate :must_have_only_allowed_rules
 
+  def base_rate(search)
+    Rule::Rate.first.properties
+    # selecting base rate
+  end
+
   private
 
     def must_have_only_allowed_rules
